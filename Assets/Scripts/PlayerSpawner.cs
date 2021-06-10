@@ -40,7 +40,7 @@ public class PlayerSpawner : NetworkBehaviour
     [ClientRpc]
     void RespawnClientRpc(Vector3 spawnPos)
     {
-        
+        this.transform.position = spawnPos;
         StartCoroutine(RespawnCoroutine(spawnPos));
     }
     IEnumerator RespawnCoroutine(Vector3 spawnPos)
